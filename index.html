@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="PVC Compuestos S.A. — Especialistas en compuestos de PVC rígido y flexible para la industria. Calidad, innovación y confianza desde Bolivia." />
+  <meta name="keywords" content="PVC, compuestos PVC, PVC rígido, PVC flexible, Bolivia, Cochabamba" />
+  <meta name="robots" content="index, follow" />
+  <title>PVC Compuestos S.A. — Especialistas en Compuestos de PVC</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="PVC Compuestos S.A." />
+  <meta property="og:description" content="Especialistas en compuestos de PVC rígido y flexible para la industria." />
+  <meta property="og:image" content="heropvc.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" type="image/png" href="logo.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- =====================================================
+       NAVBAR
+       ===================================================== -->
+  <header id="navbar" class="navbar over-hero" role="banner">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="#hero" class="navbar__logo" aria-label="PVC Compuestos S.A. — Ir al inicio">
+        <img src="logo.png" alt="PVC Compuestos S.A." />
+      </a>
+
+      <!-- Desktop navigation -->
+      <nav class="navbar__nav" role="navigation" aria-label="Navegación principal">
+        <a href="#hero" class="navbar__link" data-section="hero">Inicio</a>
+        <a href="#productos" class="navbar__link" data-section="productos">Productos</a>
+        <a href="#quienes-somos" class="navbar__link" data-section="quienes-somos">Quiénes Somos</a>
+        <a href="#contacto" class="navbar__link" data-section="contacto">Contacto</a>
+        <a href="#ubicacion" class="navbar__link" data-section="ubicacion">Ubicación</a>
+        <a href="#contacto" id="navCtaBtn" class="btn btn-primary navbar__cta" aria-label="Contáctenos">
+          Contáctenos
+        </a>
+      </nav>
+
+      <!-- Hamburger (móvil) -->
+      <button id="hamburgerBtn" class="navbar__hamburger" aria-label="Abrir menú de navegación" aria-expanded="false"
+        aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <!-- Mobile menu drawer -->
+    <nav id="mobileMenu" class="navbar__mobile-menu" role="navigation" aria-label="Menú móvil">
+      <a href="#hero" class="navbar__link" data-section="hero">Inicio</a>
+      <a href="#productos" class="navbar__link" data-section="productos">Productos</a>
+      <a href="#quienes-somos" class="navbar__link" data-section="quienes-somos">Quiénes Somos</a>
+      <a href="#contacto" class="navbar__link" data-section="contacto">Contacto</a>
+      <a href="#ubicacion" class="navbar__link" data-section="ubicacion">Ubicación</a>
+      <a href="#contacto" class="btn btn-primary">Contáctenos</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =====================================================
+         HERO — Inicio
+         ===================================================== -->
+    <section id="hero" class="hero" aria-labelledby="heroHeadline">
+
+      <!-- Contenido izquierdo -->
+      <div class="hero__content">
+
+        <h1 id="heroHeadline" class="hero__headline reveal reveal-delay-1">
+          Lorem ipsum dolor sit amet,
+          <em>consectetur adipiscing</em>
+          elit do eiusmod
+        </h1>
+
+        <p class="hero__subtext reveal reveal-delay-2">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation.
+        </p>
+
+        <div class="hero__actions reveal reveal-delay-3">
+          <a href="#productos" id="heroCtaProducts" class="btn btn-primary">
+            Ver Productos
+            <!-- Ícono flecha -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a href="#contacto" id="heroCtaContact" class="btn btn-outline">Contáctenos</a>
+        </div>
+      </div>
+
+      <!-- Imagen derecha -->
+      <div class="hero__image" role="img" aria-label="Planta industrial de PVC Compuestos S.A.">
+        <img src="heropvc.jpg" alt="Instalaciones industriales de PVC Compuestos S.A. en Bolivia" />
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PRODUCTOS / SERVICIOS
+         ===================================================== -->
+    <section id="productos" class="section productos" aria-labelledby="productosTitle">
+      <div class="container">
+
+        <header class="productos__header">
+          <h1 class="eyebrow reveal section-title reveal reveal-delay-1">Nuestros Productos</h1>
+          <h2 id="productosTitle" class=" reveal reveal-delay-1">
+            Compuestos de PVC
+          </h2>
+          <p class="section-subtitle reveal reveal-delay-2" style="margin-inline: auto; text-align: center;">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </p>
+        </header>
+
+        <!-- Tabs -->
+        <div class="tabs reveal" role="tablist" aria-label="Categorías de productos">
+          <button id="tab-rigido" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-rigido"
+            data-tab="panel-rigido">
+            <!-- Ícono cuadrado/rigidez -->
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 9h18M9 21V9" />
+            </svg>
+            PVC Rígido
+          </button>
+          <button id="tab-flexible" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-flexible"
+            data-tab="panel-flexible">
+            <!-- Ícono onda/flexibilidad -->
+            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
+              <circle cx="12" cy="12" r="3" />
+            </svg>
+            PVC Flexible
+          </button>
+        </div>
+
+        <!-- Panel: PVC Rígido -->
+        <div id="panel-rigido" class="tab-panel active" role="tabpanel" aria-labelledby="tab-rigido">
+          <div class="cards-grid">
+
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+              </div>
+              <h3 class="card__title">Lorem Ipsum Rigidus</h3>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <span class="card__tag">PVC Rígido</span>
+            </article>
+
+            <article class="card reveal reveal-delay-1">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              </div>
+              <h3 class="card__title">Consectetur Adipis</h3>
+              <p class="card__text">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </p>
+              <span class="card__tag">PVC Rígido</span>
+            </article>
+
+            <article class="card reveal reveal-delay-2">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 8v4l3 3" />
+                </svg>
+              </div>
+              <h3 class="card__title">Eiusmod Tempor</h3>
+              <p class="card__text">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+              </p>
+              <span class="card__tag">PVC Rígido</span>
+            </article>
+
+          </div>
+        </div>
+
+        <!-- Panel: PVC Flexible -->
+        <div id="panel-flexible" class="tab-panel" role="tabpanel" aria-labelledby="tab-flexible" hidden>
+          <div class="cards-grid">
+
+            <article class="card reveal">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                </svg>
+              </div>
+              <h3 class="card__title">Flexus Lorem Ipsum</h3>
+              <p class="card__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <span class="card__tag">PVC Flexible</span>
+            </article>
+
+            <article class="card reveal reveal-delay-1">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              </div>
+              <h3 class="card__title">Adipiscing Flexibilis</h3>
+              <p class="card__text">
+                Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                ad minim veniam, quis nostrud exercitation ullamco laboris.
+              </p>
+              <span class="card__tag">PVC Flexible</span>
+            </article>
+
+            <article class="card reveal reveal-delay-2">
+              <div class="card__icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M5 12.55a11 11 0 0 1 14.08 0M1.42 9a16 16 0 0 1 21.16 0M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01" />
+                </svg>
+              </div>
+              <h3 class="card__title">Dolore Magna Flex</h3>
+              <p class="card__text">
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+                eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+              </p>
+              <span class="card__tag">PVC Flexible</span>
+            </article>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         QUIÉNES SOMOS
+         ===================================================== -->
+    <section id="quienes-somos" class="section quienes section--alt" aria-labelledby="quienesTitle">
+      <div class="container">
+        <div class="quienes__grid">
+
+          <!-- Texto izquierdo -->
+          <div class="quienes__content">
+            <span class="eyebrow reveal section-title reveal reveal-delay-1">Nuestra Empresa</span>
+            <h2 id="quienesTitle" class="reveal reveal-delay-1">Quiénes Somos</h2>
+
+            <p class="reveal reveal-delay-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+              exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <p class="reveal reveal-delay-2">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+              culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+
+            <!-- Valores -->
+            <ul class="quienes__values reveal reveal-delay-3" aria-label="Nuestros valores">
+              <li class="quienes__value-item">
+                <div class="quienes__value-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="quienes__value-text">Lorem ipsum dolor sit amet consectetur</span>
+              </li>
+              <li class="quienes__value-item">
+                <div class="quienes__value-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="quienes__value-text">Sed do eiusmod tempor incididunt labore</span>
+              </li>
+              <li class="quienes__value-item">
+                <div class="quienes__value-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="quienes__value-text">Ut enim ad minim veniam quis nostrud</span>
+              </li>
+              <li class="quienes__value-item">
+                <div class="quienes__value-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                </div>
+                <span class="quienes__value-text">Duis aute irure dolor reprehenderit</span>
+              </li>
+            </ul>
+
+            <a href="#contacto" id="quienesCtaBtn" class="btn btn-primary reveal reveal-delay-4">
+              Contáctenos
+            </a>
+          </div>
+
+          <!-- Imagen derecha -->
+          <div class="quienes__image-wrap reveal reveal-delay-2">
+            <img src="heropvc.jpg" alt="Instalaciones y procesos industriales de PVC Compuestos S.A." />
+
+            <!-- Badge flotante -->
+            <div class="quienes__badge-float" aria-label="Años de experiencia">
+              <div class="quienes__badge-float-icon" aria-hidden="true">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </div>
+              <div>
+                <div class="quienes__badge-float-value">+XX años</div>
+                <div class="quienes__badge-float-label">de experiencia industrial</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         CONTACTO
+         ===================================================== -->
+    <section id="contacto" class="section contacto" aria-labelledby="contactoTitle">
+      <div class="container">
+        <div class="contacto__grid">
+
+          <!-- Info -->
+          <div class="contacto__info">
+            <h2 id="contactoTitle" class="section-title reveal reveal-delay-1">Contáctenos</h2>
+            <p class="section-subtitle reveal reveal-delay-2">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </p>
+
+            <ul class="contacto__items" aria-label="Información de contacto">
+
+              <li class="contacto__item reveal reveal-delay-2">
+                <div class="contacto__item-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacto__item-label">Teléfono</div>
+                  <div class="contacto__item-value">+591 (X) XXX-XXXX</div>
+                </div>
+              </li>
+
+              <li class="contacto__item reveal reveal-delay-3">
+                <div class="contacto__item-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacto__item-label">Correo electrónico</div>
+                  <div class="contacto__item-value">info@pvccompuestos.com.bo</div>
+                </div>
+              </li>
+
+              <li class="contacto__item reveal reveal-delay-4">
+                <div class="contacto__item-icon" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="10" r="3" />
+                    <path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 14 8 14s8-8.5 8-14a8 8 0 0 0-8-8z" />
+                  </svg>
+                </div>
+                <div>
+                  <div class="contacto__item-label">Dirección</div>
+                  <div class="contacto__item-value">
+                    Lorem ipsum dolor sit amet,<br />
+                    Cochabamba, Bolivia
+                  </div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <!-- Formulario -->
+          <div class="reveal reveal-delay-2">
+            <form id="contactForm" class="contacto__form" novalidate aria-label="Formulario de contacto">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contactNombre">Nombre completo</label>
+                  <input type="text" id="contactNombre" name="nombre" class="form-input" placeholder="Lorem Ipsum"
+                    autocomplete="name" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contactEmpresa">Empresa</label>
+                  <input type="text" id="contactEmpresa" name="empresa" class="form-input" placeholder="Empresa S.A."
+                    autocomplete="organization" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactEmail">Correo electrónico</label>
+                <input type="email" id="contactEmail" name="email" class="form-input" placeholder="lorem@empresa.com"
+                  autocomplete="email" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactAsunto">Asunto</label>
+                <input type="text" id="contactAsunto" name="asunto" class="form-input"
+                  placeholder="Lorem ipsum dolor sit amet" />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contactMensaje">Mensaje</label>
+                <textarea id="contactMensaje" name="mensaje" class="form-textarea"
+                  placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." required></textarea>
+              </div>
+              <button type="submit" id="contactSubmitBtn" class="btn btn-accent form-submit">
+                Enviar Mensaje
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  aria-hidden="true">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         UBICACIÓN
+         ===================================================== -->
+    <section id="ubicacion" class="section ubicacion" aria-labelledby="ubicacionTitle">
+      <div class="container">
+
+        <header class="ubicacion__header">
+          <span class="eyebrow reveal section-title reveal reveal-delay-1">Dónde Estamos</span>
+          <h2 id="ubicacionTitle" class="reveal reveal-delay-1">Nuestra Ubicación</h2>
+          <div class="ubicacion__address reveal reveal-delay-2" aria-label="Dirección">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="10" r="3" />
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 14 8 14s8-8.5 8-14a8 8 0 0 0-8-8z" />
+            </svg>
+            <span>PVC Compuestos Industriales SA — Cochabamba, Bolivia</span>
+          </div>
+        </header>
+
+        <!-- Google Maps embed -->
+        <div class="ubicacion__map-wrap reveal reveal-delay-2">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10769.830770031509!2d-66.14739398709861!3d-17.377673229540452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x93e37770a06d5829%3A0x99692cb0793ccb76!2sPVC%20Compuestos%20Industriales%20SA!5e0!3m2!1ses-419!2sbo!4v1786417112396!5m2!1ses-419!2sbo"
+            title="Mapa de ubicación de PVC Compuestos Industriales SA" allowfullscreen loading="lazy"
+            referrerpolicy="strict-origin-when-cross-origin">
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- =====================================================
+       FOOTER
+       ===================================================== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer__main">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a href="#hero" class="footer__logo" aria-label="PVC Compuestos S.A. — Volver al inicio">
+            <img src="logo.png" alt="PVC Compuestos S.A." />
+          </a>
+          <p class="footer__brand-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua ut enim.
+          </p>
+        </div>
+
+        <!-- Links: Navegación -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Navegación</h3>
+          <ul class="footer__links">
+            <li><a href="#hero" class="footer__link">Inicio</a></li>
+            <li><a href="#productos" class="footer__link">Productos</a></li>
+            <li><a href="#quienes-somos" class="footer__link">Quiénes Somos</a></li>
+            <li><a href="#contacto" class="footer__link">Contacto</a></li>
+            <li><a href="#ubicacion" class="footer__link">Ubicación</a></li>
+          </ul>
+        </div>
+
+        <!-- Links: Productos -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Productos</h3>
+          <ul class="footer__links">
+            <li><a href="#productos" class="footer__link">PVC Rígido</a></li>
+            <li><a href="#productos" class="footer__link">PVC Flexible</a></li>
+            <li><a href="#productos" class="footer__link">Lorem Ipsum</a></li>
+            <li><a href="#productos" class="footer__link">Dolor Sit Amet</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer__col">
+          <h3 class="footer__col-title">Contacto</h3>
+          <div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <span class="footer__contact-text">+591 (X) XXX-XXXX</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <span class="footer__contact-text">info@pvccompuestos.com.bo</span>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="10" r="3" />
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.5 8 14 8 14s8-8.5 8-14a8 8 0 0 0-8-8z" />
+              </svg>
+              <span class="footer__contact-text">Cochabamba, Bolivia</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer__bottom">
+        <p class="footer__copyright">
+          &copy; <span id="footerYear"></span> PVC Compuestos S.A. Todos los derechos reservados.
+        </p>
+        <nav class="footer__bottom-links" aria-label="Links legales">
+          <a href="#" class="footer__link">Política de Privacidad</a>
+          <a href="#" class="footer__link">Términos de Uso</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+  <script>
+    // Año dinámico en el footer
+    document.getElementById('footerYear').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+
+</html>
