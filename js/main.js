@@ -85,36 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  /* =========================================================
-     4. TABS — Sección Productos
-     ========================================================= */
-  const tabBtns   = document.querySelectorAll('.tab-btn');
-  const tabPanels = document.querySelectorAll('.tab-panel');
-
-  tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const target = btn.dataset.tab;
-
-      // Actualizar botones
-      tabBtns.forEach(b => {
-        b.classList.remove('active');
-        b.setAttribute('aria-selected', 'false');
-      });
-      btn.classList.add('active');
-      btn.setAttribute('aria-selected', 'true');
-
-      // Actualizar paneles
-      tabPanels.forEach(panel => {
-        panel.classList.remove('active');
-        panel.setAttribute('hidden', '');
-      });
-      const targetPanel = document.getElementById(target);
-      if (targetPanel) {
-        targetPanel.classList.add('active');
-        targetPanel.removeAttribute('hidden');
-      }
-    });
-  });
 
   /* =========================================================
      5. SCROLL REVEAL — Intersection Observer

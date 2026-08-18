@@ -81,13 +81,14 @@
         <h1 id="heroHeadline" class="hero__headline reveal reveal-delay-1">
           Nuestra empresa
           <em>PVC Compuestos S.A.</em>
-          es el resultado conjunto de empresarios argentinos de <strong>PVC TECNOCOM S.A.</strong> y empresarios bolivianos de <strong>PETROQUIM S.R.L.</strong>
+          es el resultado conjunto de empresarios argentinos de <strong>PVC TECNOCOM S.A.</strong> y empresarios
+          bolivianos de <strong>PETROQUIM S.R.L.</strong>
         </h1>
 
         <p class="hero__subtext reveal reveal-delay-2">
           que confiando en las perspectivas presentes y futuras del mercado boliviano, y de
-los países limítrofes, deciden instalar una unidad industrial para producir Compuestos
-de PVC en la ciudad de Cochabamba.
+          los países limítrofes, deciden instalar una unidad industrial para producir Compuestos
+          de PVC en la ciudad de Cochabamba.
         </p>
 
         <div class="hero__actions reveal reveal-delay-3">
@@ -118,56 +119,29 @@ de PVC en la ciudad de Cochabamba.
       <div class="container">
 
         <header class="productos__header">
-          <h1 class="eyebrow reveal section-title reveal reveal-delay-1">Nuestros Productos</h1>
-          <h2 id="productosTitle" class=" reveal reveal-delay-1">
+          <span class="eyebrow reveal reveal-delay-1">Nuestros Productos</span>
+          <h2 id="productosTitle" class="section-title reveal reveal-delay-1">
             Compuestos de PVC
           </h2>
-          <p class="section-subtitle reveal reveal-delay-2" style="margin-inline: auto; text-align: center;">
-            Nuestra preocupación siempre será, el desarrollar los materiales que requiera el cliente, cumpliendo con todas las
-normas de calidad requeridas.
+          <p class="section-subtitle reveal reveal-delay-2">
+            Nuestra preocupación siempre será desarrollar los materiales que requiera el cliente, cumpliendo con todas
+            las normas de calidad requeridas.
           </p>
         </header>
 
-        <!-- Tabs -->
-        <div class="tabs reveal" role="tablist" aria-label="Categorías de productos">
-          <button id="tab-rigido" class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-rigido"
-            data-tab="panel-rigido">
-            <!-- Ícono cuadrado/rigidez -->
-            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="3" width="18" height="18" rx="2" />
-              <path d="M3 9h18M9 21V9" />
-            </svg>
-            PVC Rígido
-          </button>
-          <button id="tab-flexible" class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-flexible"
-            data-tab="panel-flexible">
-            <!-- Ícono onda/flexibilidad -->
-            <svg class="tab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7z" />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
-            PVC Flexible
-          </button>
-        </div>
+        <!-- ── SUBSECCIÓN: PVC RÍGIDO ── -->
+        <div class="productos__subsection reveal reveal-delay-2" aria-labelledby="rigidoTitle">
+          <h3 id="rigidoTitle" class="productos__sub-title">Compuestos Rígidos</h3>
 
-        <!-- Panel: PVC Rígido -->
-        <div id="panel-rigido" class="tab-panel active" role="tabpanel" aria-labelledby="tab-rigido">
-          <div class="products-showcase">
-            <article class="card product-card reveal">
-              <div class="card__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-              </div>
-              <h3 class="card__title">Compuestos Rígidos</h3>
-              <p class="card__text">
+          <div class="productos__sub-layout">
+
+            <!-- Info + propiedades -->
+            <div class="productos__sub-info">
+              <p class="productos__sub-desc">
                 Desarrollamos soluciones tecnológicas para aplicaciones industriales que requieren durabilidad,
                 estabilidad dimensional y desempeño confiable.
               </p>
-              <p class="card__text">
+              <p class="productos__sub-desc">
                 Nuestros compuestos rígidos se emplean en la extrusión de perfiles y tubos, la inyección de accesorios
                 para tubería y la extrusión-soplado para envases de agua mineral, jugos, cosméticos, aceites comestibles
                 y aceites industriales.
@@ -182,54 +156,69 @@ normas de calidad requeridas.
                   <span>Estable e inerte</span>
                 </div>
               </div>
-              <span class="card__tag">PVC Rígido</span>
-            </article>
-
-            <div class="product-visual reveal reveal-delay-1" aria-label="Imagen representativa de productos rígidos">
-              <img src="bolsapvc25kg.jpeg" alt="Presentación de compuestos de PVC rígido en bolsas" />
             </div>
-            <div class="product-footer-grid">
-              <article class="product-footer-card reveal reveal-delay-2">
-                <h4>Amplia variedad</h4>
-                <p>
-                  Ofrecemos una amplia variedad de compuestos según la necesidad del cliente, distintas durezas como también diferentes colores de compuesto.
-                </p>
-              </article>
-              <article class="product-footer-card reveal reveal-delay-3">
-                <h4>Presentación</h4>
-                <p>
-                  Presentación en polvo o granulado en bolsas de 25 kg.
-                </p>
-              </article>
-              <article class="product-footer-card reveal reveal-delay-4">
-                <h4>Asesoría técnica</h4>
-                <p>
-                  Asesoría técnica para la elaboración de nuevos productos en base a PVC.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
 
-        <!-- Panel: PVC Flexible -->
-        <div id="panel-flexible" class="tab-panel" role="tabpanel" aria-labelledby="tab-flexible" hidden>
-          <div class="products-showcase">
-            <article class="card product-card reveal">
-              <div class="card__icon" aria-hidden="true">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
+            <!-- Carrusel PVC Rígido (4 slides) -->
+            <div class="pvc-slider" aria-label="Galería de productos PVC Rígido">
+              <input checked type="radio" name="rigido-slider" id="rigido-slide1" />
+              <input type="radio" name="rigido-slider" id="rigido-slide2" />
+              <input type="radio" name="rigido-slider" id="rigido-slide3" />
+              <input type="radio" name="rigido-slider" id="rigido-slide4" />
+
+              <div class="pvc-slider__wrapper">
+                <div class="pvc-slider__inner">
+                  <article>
+                    <img src="rigidoimg/1rr.webp" alt="Compuesto PVC Rígido — vista 1" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="rigidoimg/2r.jpg" alt="Compuesto PVC Rígido — vista 2" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="rigidoimg/3r.jpg" alt="Compuesto PVC Rígido — vista 3" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="rigidoimg/bolsapvc25kg.jpeg" alt="Presentación bolsa 25 kg PVC Rígido" loading="lazy" />
+                  </article>
+                </div>
               </div>
-              <h3 class="card__title">Compuestos Flexibles</h3>
-              <p class="card__text">
+
+              <div class="pvc-slider__prev-next">
+                <label for="rigido-slide1"></label>
+                <label for="rigido-slide2"></label>
+                <label for="rigido-slide3"></label>
+                <label for="rigido-slide4"></label>
+              </div>
+
+              <div class="pvc-slider__dots" aria-label="Navegación del carrusel PVC Rígido">
+                <label for="rigido-slide1"></label>
+                <label for="rigido-slide2"></label>
+                <label for="rigido-slide3"></label>
+                <label for="rigido-slide4"></label>
+              </div>
+            </div>
+
+          </div><!-- /.productos__sub-layout -->
+        </div><!-- /.productos__subsection — Rígido -->
+
+        <!-- Divisor dorado -->
+        <hr class="gold-divider productos__divider" aria-hidden="true" />
+
+        <!-- ── SUBSECCIÓN: PVC FLEXIBLE ── -->
+        <div class="productos__subsection reveal reveal-delay-2" aria-labelledby="flexibleTitle">
+          <h3 id="flexibleTitle" class="productos__sub-title">Compuestos Flexibles</h3>
+
+          <div class="productos__sub-layout">
+
+            <!-- Info + propiedades -->
+            <div class="productos__sub-info">
+              <p class="productos__sub-desc">
                 Ofrecemos compuestos flexibles diseñados para aplicaciones donde la versatilidad, la comodidad de uso y
                 la adaptación a procesos de transformación resultan clave.
               </p>
-              <p class="card__text">
-                Se emplean en la extrusión de conductores eléctricos, cables telefónicos, perfiles para muebles y automotriz,
-                envases atóxicos para uso alimenticio y medicinal, así como en inyección de suelas, botas de lluvia,
-                zapatos de plástico y accesorios sanitarios.
+              <p class="productos__sub-desc">
+                Se emplean en la extrusión de conductores eléctricos, cables telefónicos, perfiles para muebles y
+                automotriz, envases atóxicos para uso alimenticio y medicinal, así como en inyección de suelas, botas de
+                lluvia, zapatos de plástico y accesorios sanitarios.
               </p>
               <div class="product-properties-block">
                 <h4 class="product-properties-title">Propiedades principales</h4>
@@ -241,34 +230,75 @@ normas de calidad requeridas.
                   <span>Resistencia al desgarro</span>
                 </div>
               </div>
-              <span class="card__tag">PVC Flexible</span>
-            </article>
+            </div>
 
-            <div class="product-visual reveal reveal-delay-1" aria-label="Imagen representativa de productos flexibles">
-              <img src="bolsapvc30kh.jpeg" alt="Presentación de compuestos de PVC flexible en bolsas" />
+            <!-- Carrusel PVC Flexible (4 slides) -->
+            <div class="pvc-slider" aria-label="Galería de productos PVC Flexible">
+              <input checked type="radio" name="flex-slider" id="flex-slide1" />
+              <input type="radio" name="flex-slider" id="flex-slide2" />
+              <input type="radio" name="flex-slider" id="flex-slide3" />
+              <input type="radio" name="flex-slider" id="flex-slide4" />
+
+              <div class="pvc-slider__wrapper">
+                <div class="pvc-slider__inner">
+                  <article>
+                    <img src="flexibleimg/1f.jpeg" alt="Compuesto PVC Flexible — vista 1" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="flexibleimg/2f.webp" alt="Compuesto PVC Flexible — vista 2" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="flexibleimg/3f.jpg" alt="Compuesto PVC Flexible — vista 3" loading="lazy" />
+                  </article>
+                  <article>
+                    <img src="flexibleimg/bolsapvc30kh.jpeg" alt="Presentación bolsa 30 kg PVC Flexible"
+                      loading="lazy" />
+                  </article>
+                </div>
+              </div>
+
+              <div class="pvc-slider__prev-next">
+                <label for="flex-slide1"></label>
+                <label for="flex-slide2"></label>
+                <label for="flex-slide3"></label>
+                <label for="flex-slide4"></label>
+              </div>
+
+              <div class="pvc-slider__dots" aria-label="Navegación del carrusel PVC Flexible">
+                <label for="flex-slide1"></label>
+                <label for="flex-slide2"></label>
+                <label for="flex-slide3"></label>
+                <label for="flex-slide4"></label>
+              </div>
             </div>
-            <div class="product-footer-grid">
-              <article class="product-footer-card reveal reveal-delay-2">
-                <h4>Amplia variedad</h4>
-                <p>
-                  Ofrecemos una amplia variedad de compuestos según la necesidad del cliente, distintas durezas como también diferentes colores de compuesto.
-                </p>
-              </article>
-              <article class="product-footer-card reveal reveal-delay-3">
-                <h4>Presentación</h4>
-                <p>
-                  Presentación en polvo o granulado en bolsas de 25 kg.
-                </p>
-              </article>
-              <article class="product-footer-card reveal reveal-delay-4">
-                <h4>Asesoría técnica</h4>
-                <p>
-                  Asesoría técnica para la elaboración de nuevos productos en base a PVC.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
+
+          </div><!-- /.productos__sub-layout -->
+        </div><!-- /.productos__subsection — Flexible -->
+
+        <!-- ── CARDS INFORMATIVAS COMPARTIDAS ── -->
+        <div class="productos__cards-footer">
+          <article class="product-footer-card reveal reveal-delay-1">
+            <h4>Amplia variedad</h4>
+            <p>
+              Ofrecemos una amplia variedad de compuestos según la necesidad del cliente, distintas durezas como también
+              diferentes colores de compuesto.
+            </p>
+          </article>
+          <article class="product-footer-card reveal reveal-delay-2">
+            <h4>Presentación</h4>
+            <p>
+              Presentación en polvo o granulado en bolsas de 25 kg, optimizadas para facilitar el manejo, almacenamiento
+              y transporte.
+            </p>
+          </article>
+          <article class="product-footer-card reveal reveal-delay-3">
+            <h4>Asesoría técnica</h4>
+            <p>
+              Asesoría técnica especializada para la elaboración de nuevos productos en base a PVC, con el respaldo de
+              más de 25 años de experiencia.
+            </p>
+          </article>
+        </div><!-- /.productos__cards-footer -->
 
       </div>
     </section>
@@ -283,79 +313,24 @@ normas de calidad requeridas.
 
           <!-- Texto izquierdo -->
           <div class="quienes__content">
-            <span class="eyebrow reveal section-title reveal reveal-delay-1">Nuestra Empresa</span>
-            <h2 id="quienesTitle" class="reveal reveal-delay-1">Quiénes Somos</h2>
+            <span class="eyebrow reveal reveal-delay-1">Nuestra Empresa</span>
+            <h2 id="quienesTitle" class="section-title reveal reveal-delay-1">Quiénes Somos</h2>
 
             <p class="reveal reveal-delay-2">
-             
-            </p>
-            <p class="reveal reveal-delay-2">
-              En esta Asociación se conjuncionan, la amplia experiencia en producción y tecnología
-de PVC TECNOCOM S.A. (Argentina) con la experiencia comercial y conocimiento del
-mercado que aporta PETROQUIM. Este esfuerzo conjunto será de beneficio, no sólo para
-todos los consumidores actuales de compuestos de PVC, sino, también permitirá el desarrollo
-de nuevas iniciativas y ampliaciones de las existentes.
-PVC COMPUESTOS S.A. es una empresa de puertas abiertas, donde los clientes pueden
-utilizar todos nuestros recursos humanos y técnicos para optimizar sus necesidades.
-Nuestro principal objetivo es y será siempre prestarles el mejor servicio.
+              Unimos la amplia experiencia en producción y tecnología de <strong>PVC TECNOCOM S.A.</strong> (Argentina)
+              con el conocimiento comercial del mercado boliviano que aporta <strong>PETROQUIM S.R.L.</strong> Este
+              esfuerzo conjunto beneficia a todos los consumidores actuales y abre camino a nuevas iniciativas. PVC
+              Compuestos S.A. es una empresa de puertas abiertas: nuestros clientes pueden aprovechar todos nuestros
+              recursos humanos y técnicos. Nuestro objetivo siempre será brindar el mejor servicio.
             </p>
 
             <p class="reveal reveal-delay-2">
-              A fin de cumplir con el objetivo anterior, hemos adquirido la mejor maquinaría disponible
-en el mercado mundial: Extrusoras, Granuladoras, Enfriamiento y Empaque de
-KRAUSS - MAFFEI de Alemania, y Turbomezcladoras de PLASMEC de Italia.
-Estos equipos totalmente computarizados, nos permitirán producir 500 toneladas métricas
-al mes de Compuestos rígidos y flexibles granulados de PVC, en nuestras instalaciones
-de 2.000 metros cuadrados cubiertos.
-La Tecnología para las formulaciones son el resultado de más de 20 años de experiencia en la fabricación de
-Compuestos y productos de PVC, complementadas por un eficiente manejo humano,
-aportado por profesionales bolivianos debidamente entrenados, lo que permitirá obtener
-Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
-
+              Contamos con maquinaria de última generación: Extrusoras, Granuladoras y sistemas de Enfriamiento y
+              Empaque <strong>KRAUSS-MAFFEI</strong> (Alemania), y Turbomezcladoras <strong>PLASMEC</strong> (Italia).
+              Con equipos totalmente computarizados producimos <strong>500 toneladas métricas mensuales</strong> de
+              compuestos rígidos y flexibles granulados de PVC en 2.000 m² cubiertos, respaldados por más de 20 años de
+              experiencia en formulaciones.
             </p>
-            <!-- Valores -->
-            <ul class="quienes__values reveal reveal-delay-3" aria-label="Nuestros valores">
-              <li class="quienes__value-item">
-                <div class="quienes__value-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <span class="quienes__value-text">Lorem ipsum dolor sit amet consectetur</span>
-              </li>
-              <li class="quienes__value-item">
-                <div class="quienes__value-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <span class="quienes__value-text">Sed do eiusmod tempor incididunt labore</span>
-              </li>
-              <li class="quienes__value-item">
-                <div class="quienes__value-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <span class="quienes__value-text">Ut enim ad minim veniam quis nostrud</span>
-              </li>
-              <li class="quienes__value-item">
-                <div class="quienes__value-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                    stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                </div>
-                <span class="quienes__value-text">Duis aute irure dolor reprehenderit</span>
-              </li>
-            </ul>
-
-            <a href="#contacto" id="quienesCtaBtn" class="btn btn-primary reveal reveal-delay-4">
-              Contáctenos
-            </a>
           </div>
 
           <!-- Imagen derecha -->
@@ -394,8 +369,8 @@ Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
           <div class="contacto__info">
             <h2 id="contactoTitle" class="section-title reveal reveal-delay-1">Contáctenos</h2>
             <p class="section-subtitle reveal reveal-delay-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore et dolore magna aliqua.
+              Estamos disponibles para atender sus consultas y brindarle la asesoría que necesita. Escríbanos o
+              llámenos.
             </p>
 
             <ul class="contacto__items" aria-label="Información de contacto">
@@ -439,7 +414,7 @@ Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
                 <div>
                   <div class="contacto__item-label">Dirección</div>
                   <div class="contacto__item-value">
-                    Lorem ipsum dolor sit amet,<br />
+                    Av. Blanco Galindo Km 5,<br />
                     Cochabamba, Bolivia
                   </div>
                 </div>
@@ -502,8 +477,8 @@ Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
       <div class="container">
 
         <header class="ubicacion__header">
-          <span class="eyebrow reveal section-title reveal reveal-delay-1">Dónde Estamos</span>
-          <h2 id="ubicacionTitle" class="reveal reveal-delay-1">Nuestra Ubicación</h2>
+          <span class="eyebrow reveal reveal-delay-1">Dónde Estamos</span>
+          <h2 id="ubicacionTitle" class="section-title reveal reveal-delay-1">Nuestra Ubicación</h2>
           <div class="ubicacion__address reveal reveal-delay-2" aria-label="Dirección">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
               stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -543,8 +518,7 @@ Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
             <img src="logo.png" alt="PVC Compuestos S.A." />
           </a>
           <p class="footer__brand-desc">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore magna aliqua ut enim.
+            Especialistas en la producción de compuestos de PVC rígido y flexible para la industria. Calidad, innovación y servicio desde Cochabamba, Bolivia.
           </p>
         </div>
 
@@ -566,8 +540,6 @@ Compuestos optimizados, para cada una de las necesidades de nuestros clientes.
           <ul class="footer__links">
             <li><a href="#productos" class="footer__link">PVC Rígido</a></li>
             <li><a href="#productos" class="footer__link">PVC Flexible</a></li>
-            <li><a href="#productos" class="footer__link">Lorem Ipsum</a></li>
-            <li><a href="#productos" class="footer__link">Dolor Sit Amet</a></li>
           </ul>
         </div>
 
