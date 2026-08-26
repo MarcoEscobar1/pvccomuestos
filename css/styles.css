@@ -1002,20 +1002,18 @@ button {
 }
 
 /* =========================================================
-   CARRUSEL RÍGIDO — reglas para 4 slides
+   CARRUSEL RÍGIDO — reglas para 3 slides
    ========================================================= */
 
-/* Slide 1 activo → inner en posición 0% */
+/* Slide activo → inner en posición */
 #rigido-slide1:checked ~ .pvc-slider__wrapper .pvc-slider__inner { margin-left: 0%; }
 #rigido-slide2:checked ~ .pvc-slider__wrapper .pvc-slider__inner { margin-left: -100%; }
 #rigido-slide3:checked ~ .pvc-slider__wrapper .pvc-slider__inner { margin-left: -200%; }
-#rigido-slide4:checked ~ .pvc-slider__wrapper .pvc-slider__inner { margin-left: -300%; }
 
 /* Dots activos */
 #rigido-slide1:checked ~ .pvc-slider__dots label:nth-child(1),
 #rigido-slide2:checked ~ .pvc-slider__dots label:nth-child(2),
-#rigido-slide3:checked ~ .pvc-slider__dots label:nth-child(3),
-#rigido-slide4:checked ~ .pvc-slider__dots label:nth-child(4) {
+#rigido-slide3:checked ~ .pvc-slider__dots label:nth-child(3) {
   background: var(--color-primary);
   width: 22px;
 }
@@ -1033,18 +1031,12 @@ button {
 }
 #rigido-slide2:checked ~ .pvc-slider__prev-next label:nth-child(3)::after { content: '›'; }
 
-#rigido-slide3:checked ~ .pvc-slider__prev-next label:nth-child(4) {
+/* Slide 3 (último) → siguiente = vuelve a slide 1 */
+#rigido-slide3:checked ~ .pvc-slider__prev-next label:nth-child(1) {
   display: flex;
   right: -22px;
 }
-#rigido-slide3:checked ~ .pvc-slider__prev-next label:nth-child(4)::after { content: '›'; }
-
-/* Slide 4 (último) → siguiente = vuelve a slide 1 */
-#rigido-slide4:checked ~ .pvc-slider__prev-next label:nth-child(1) {
-  display: flex;
-  right: -22px;
-}
-#rigido-slide4:checked ~ .pvc-slider__prev-next label:nth-child(1)::after { content: '›'; }
+#rigido-slide3:checked ~ .pvc-slider__prev-next label:nth-child(1)::after { content: '›'; }
 
 /* Botón ANTERIOR para cada slide */
 #rigido-slide2:checked ~ .pvc-slider__prev-next label:nth-child(1) {
@@ -1059,18 +1051,12 @@ button {
 }
 #rigido-slide3:checked ~ .pvc-slider__prev-next label:nth-child(2)::after { content: '‹'; }
 
-#rigido-slide4:checked ~ .pvc-slider__prev-next label:nth-child(3) {
+/* Slide 1 (primero) → anterior = va al último (slide 3) */
+#rigido-slide1:checked ~ .pvc-slider__prev-next label:nth-child(3) {
   display: flex;
   left: -22px;
 }
-#rigido-slide4:checked ~ .pvc-slider__prev-next label:nth-child(3)::after { content: '‹'; }
-
-/* Slide 1 (primero) → anterior = va al último */
-#rigido-slide1:checked ~ .pvc-slider__prev-next label:nth-child(4) {
-  display: flex;
-  left: -22px;
-}
-#rigido-slide1:checked ~ .pvc-slider__prev-next label:nth-child(4)::after { content: '‹'; }
+#rigido-slide1:checked ~ .pvc-slider__prev-next label:nth-child(3)::after { content: '‹'; }
 
 /* =========================================================
    CARRUSEL FLEXIBLE — reglas para 4 slides
