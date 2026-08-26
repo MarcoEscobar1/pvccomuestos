@@ -134,23 +134,177 @@ document.addEventListener('DOMContentLoaded', () => {
   sections.forEach(sec => sectionObserver.observe(sec));
 
   /* =========================================================
-     7. FORMULARIO — Prevención básica + feedback visual
+     7. FORMULARIO — Validación completa + Web3Forms
      ========================================================= */
-  const contactForm = document.getElementById('contactForm');
+  const contactForm   = document.getElementById('contactForm');
+  const formStatus    = document.getElementById('formStatus');
+  const charCount     = document.getElementById('charCount');
+  const msgTextarea   = document.getElementById('contactMensaje');
+  const submitBtn     = document.getElementById('contactSubmitBtn');
+
+  // ── Contador de caracteres del mensaje ──
+  if (msgTextarea && charCount) {
+    msgTextarea.addEventListener('input', () => {
+      const len = msgTextarea.value.length;
+      charCount.textContent = `${len} / 2000`;
+      charCount.classList.toggle('form-char-count--warn', len > 1800);
+    });
+  }
+
+  // ── Utilidades de validación ──
+  function showError(inputId, errorId, message) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    if (input)  input.classList.add('form-input--error');
+    if (error) { error.textContent = message; error.hidden = false; }
+  }
+
+  function clearError(inputId, errorId) {
+    const input = document.getElementById(inputId);
+    const error = document.getElementById(errorId);
+    if (input)  input.classList.remove('form-input--error');
+    if (error) { error.textContent = ''; error.hidden = true; }
+  }
+
+  function clearAllErrors() {
+    [
+      ['contactNombre',   'errorNombre'],
+      ['contactEmpresa',  'errorEmpresa'],
+      ['contactEmail',    'errorEmail'],
+      ['contactTelefono', 'errorTelefono'],
+      ['contactAsunto',   'errorAsunto'],
+      ['contactMensaje',  'errorMensaje'],
+    ].forEach(([iId, eId]) => clearError(iId, eId));
+  }
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email);
+  }
+
+  function validatePhone(phone) {
+    // Obligatorio: acepta formatos tipo +591 7XXXXXXX o números locales
+    return /^[+\d\s\-().]{6,20}$/.test(phone);
+  }
+
+  function validateForm() {
+    let valid = true;
+
+    const nombre   = document.getElementById('contactNombre')?.value.trim()   ?? '';
+    const empresa  = document.getElementById('contactEmpresa')?.value.trim()  ?? '';
+    const email    = document.getElementById('contactEmail')?.value.trim()    ?? '';
+    const telefono = document.getElementById('contactTelefono')?.value.trim() ?? '';
+    const asunto   = document.getElementById('contactAsunto')?.value.trim()   ?? '';
+    const mensaje  = document.getElementById('contactMensaje')?.value.trim()  ?? '';
+
+    if (nombre.length < 2) {
+      showError('contactNombre', 'errorNombre', 'Ingrese su nombre completo (mínimo 2 caracteres).');
+      valid = false;
+    }
+
+    if (empresa.length < 2) {
+      showError('contactEmpresa', 'errorEmpresa', 'Ingrese el nombre de su empresa (mínimo 2 caracteres).');
+      valid = false;
+    }
+
+    if (!validateEmail(email)) {
+      showError('contactEmail', 'errorEmail', 'Ingrese un correo electrónico válido.');
+      valid = false;
+    }
+
+    if (!validatePhone(telefono)) {
+      showError('contactTelefono', 'errorTelefono', 'Ingrese un teléfono válido (ej: +591 77999345).');
+      valid = false;
+    }
+
+    if (asunto.length < 3) {
+      showError('contactAsunto', 'errorAsunto', 'Ingrese un asunto (mínimo 3 caracteres).');
+      valid = false;
+    }
+
+    if (mensaje.length < 10) {
+      showError('contactMensaje', 'errorMensaje', 'El mensaje debe tener al menos 10 caracteres.');
+      valid = false;
+    }
+
+    return valid;
+  }
+
+  // ── Validación en tiempo real al salir de cada campo ──
+  [
+    { id: 'contactNombre',   errId: 'errorNombre'   },
+    { id: 'contactEmpresa',  errId: 'errorEmpresa'  },
+    { id: 'contactEmail',    errId: 'errorEmail'    },
+    { id: 'contactTelefono', errId: 'errorTelefono' },
+    { id: 'contactAsunto',   errId: 'errorAsunto'   },
+    { id: 'contactMensaje',  errId: 'errorMensaje'  },
+  ].forEach(({ id, errId }) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('blur', () => {
+      clearError(id, errId);
+      validateForm();
+    });
+  });
+
+  // ── UI del botón ──
+  function setLoading(loading) {
+    if (!submitBtn) return;
+    const btnText    = submitBtn.querySelector('.btn-text');
+    const btnSpinner = submitBtn.querySelector('.btn-spinner');
+    const btnIcon    = submitBtn.querySelector('.btn-icon');
+    submitBtn.disabled = loading;
+    if (btnText)    btnText.textContent = loading ? 'Enviando…' : 'Enviar Mensaje';
+    if (btnSpinner) btnSpinner.hidden   = !loading;
+    if (btnIcon)    btnIcon.hidden      = loading;
+  }
+
+  function showFormStatus(type, message) {
+    if (!formStatus) return;
+    formStatus.hidden    = false;
+    formStatus.className = `form-status form-status--${type}`;
+    formStatus.textContent = message;
+    // Auto-ocultar el mensaje de éxito después de 8s
+    if (type === 'success') {
+      setTimeout(() => { formStatus.hidden = true; }, 8000);
+    }
+  }
+
+  // ── Envío del formulario ──
   if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const btn = contactForm.querySelector('.form-submit');
-      if (btn) {
-        btn.textContent = '✓ Mensaje enviado';
-        btn.disabled = true;
-        btn.style.opacity = '0.7';
-        setTimeout(() => {
-          btn.textContent = 'Enviar Mensaje';
-          btn.disabled = false;
-          btn.style.opacity = '';
+      clearAllErrors();
+      if (formStatus) formStatus.hidden = true;
+
+      if (!validateForm()) {
+        // Scroll suave al primer error
+        const firstError = contactForm.querySelector('.form-input--error');
+        if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        return;
+      }
+
+      setLoading(true);
+
+      try {
+        const formData = new FormData(contactForm);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          showFormStatus('success', '✓ ¡Mensaje enviado! Le responderemos a la brevedad.');
           contactForm.reset();
-        }, 3000);
+          if (charCount) charCount.textContent = '0 / 2000';
+          clearAllErrors();
+        } else {
+          showFormStatus('error', '✗ Hubo un problema al enviar. Por favor intente de nuevo.');
+        }
+      } catch (err) {
+        showFormStatus('error', '✗ Error de red. Verifique su conexión e intente de nuevo.');
+      } finally {
+        setLoading(false);
       }
     });
   }
