@@ -1917,3 +1917,49 @@ button {
     justify-content: center;
   }
 }
+
+/* =========================================================
+   BOTÓN FLOTANTE DE WHATSAPP (SOLO ICONO)
+   ========================================================= */
+.whatsapp-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  will-change: transform;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-4px) scale(1.1);
+  background: transparent;
+  box-shadow: none;
+}
+
+.whatsapp-btn__icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: 18px;
+    right: 18px;
+    width: 52px;
+    height: 52px;
+  }
+}
